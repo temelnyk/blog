@@ -14,7 +14,7 @@
 1. Make sure the Apache and MySQL/MariaDB servers are up and running.
 1. Add the record `127.0.0.1       blog` to your **hosts file** ('/etc/hosts' in Linux; `C:\\Windows\\System32\\drivers\\etc\\hosts` in Windows).
 1. Adjust directories in `apache2.conf` (make sure paths refer to real project directory):
-  - **Linux:** `cat apache2.conf | sed "s:/home.*\.if\.ua:$(pwd):g" > apache2.conf`
+  - **Linux:** `cat apache2.conf | sed "s:/home.*blog:$(pwd):g" > apache2.conf`
   - **Windows:** do it manually.
 1. Create the symlink from `apache2.conf` to the config file responsible for the project in Apache config directory (mind the correct path to the project dir):
   - **Linux:** `cd /etc/apache2/sites-available && sudo ln -s /home/rom/Prj/blog/apache2.conf blog.conf && cd -`
