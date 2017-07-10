@@ -1,3 +1,8 @@
 .idea/
-.logs/
+.vscode/
 
+client/node_modules/
+client/npm-debug.log
+
+CREDS.md
+server/php/creds.php
