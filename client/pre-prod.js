@@ -3,7 +3,7 @@
 const path = require('path');
 const fs = require('fs');
 
-const gitignoreName = '.gitignore2';
+const gitignoreName = '.gitignore';
 const gitignoreContent = `*
 !.gitignore
 `;

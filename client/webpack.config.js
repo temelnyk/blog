@@ -8,7 +8,7 @@ const BabiliPlugin = require("babili-webpack-plugin");
 module.exports = (env) => {
     const isProd = env && env.PROD;
     if (isProd) {
-        console.log('=== PRODUCTION MODE ===');
+        console.log('<<< PRODUCTION MODE >>>');
     }
 
     const outputPath = path.resolve(__dirname, '..', 'server');
@@ -34,7 +34,8 @@ module.exports = (env) => {
 
 
     const cleanWebpackPlugin = new CleanWebpackPlugin(['css', 'js'], {
-        root: outputPath
+        root: outputPath,
+        exclude: ['.gitignore']
     });
 
     const plugins = [
