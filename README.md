@@ -100,7 +100,9 @@ The content of `client` contains JS and SCSS development files. They are compile
 - `npm i`
 - `npm run dev` for developing (watch both SCSS and JS; compiles everything automatically);
 - `npm run test`
-- `npm run prod` before uploading files to production.
+- `npm run prod` before uploading files to production.  
+   **Mind that this script removes `.gitignore` files** in `server/css` and `server/js` folders.  
+   They are restored automatically before `npm run dev`.
 
 Client app contains Admin app (SPA) and some business logic for General area.
 
