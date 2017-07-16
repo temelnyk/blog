@@ -1,13 +1,30 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300&subset=cyrillic');
-$font-family: 'Roboto Condensed', Helvetica, sans-serif;
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300&subset=cyrillic");
+$font-family: "Roboto Condensed", Helvetica, sans-serif;
 $font-size: 18px;
 $font-weight: 300;
 
 
 $interval-big: 2rem;
 $interval-small: .5rem;
+$interval-x-small: .25rem;
 
+
+// {hue - 20} from "pure" color
+$color-red: hsl(340, 70%, 50%);
+$color-green: hsl(100, 70%, 50%);
+$color-blue: hsl(240, 70%, 50%);
+$color-grey: hsl(0, 0%, 65%);
 
 $color-bg: #fff;
 $color-text: #222;
-$color-link: hsl(240, 50%, 50%);
+$color-link: $color-blue;
+
+$color-fade-amount: 10%;
+
+
+$screen-s-width: 480px;
+$screen-m-width: 800px;
+$screen-content-max-width: 1400px;
+
+
+$transition-props: .15s ease-in;

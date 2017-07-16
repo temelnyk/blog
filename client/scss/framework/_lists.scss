@@ -1,0 +1,20 @@
+@import "config";
+
+
+.v-list > * {
+  margin-bottom: $interval-small;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+.h-list > * {
+  display: inline-block;
+  margin-right: $interval-big;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
