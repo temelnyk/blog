@@ -4,7 +4,7 @@ const test = require('./test');
 
 const App = {
     start() {
-        console.log(`It works! "${test}"`);
+        console.log(`General area! "${test}"`);
     }
 };
 

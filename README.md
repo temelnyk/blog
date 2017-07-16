@@ -84,6 +84,29 @@ const FB_APP_CREDENTIALS = array(
 
 
 
+## Architecture
+Client-based code and server-based code are developed separately in appropriate folders.
+
+### `server/`
+
+The content of `server/` is server-ready so should be uploaded to the server as is. The content is adapted for PHP-powered Apache2 server. Entry points are
+- `index.php`: general area; query params determine what to show; SEO-friendly;
+- `admin.php`: admin area; password protected; SPA (see following section).
+
+### `client/`
+
+The content of `client` contains JS and SCSS development files. They are compiled to proper locations of `server/` folder. Development process:
+- `cd client`
+- `npm i`
+- `npm run dev` for developing (watch both SCSS and JS; compiles everything automatically);
+- `npm run test`
+- `npm run prod` before uploading files to production.
+
+Client app contains Admin app (SPA) and some business logic for General area.
+
+
+
+
 ## Credits
 
 Roman Melnyk [email.rom.melnyk@gmail.com]: development

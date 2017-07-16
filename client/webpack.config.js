@@ -52,7 +52,8 @@ module.exports = (env) => {
 
     const CONFIG_BASE = {
         entry: {
-            script: './js/index.js',
+            'admin-app': './js/admin-app.js',
+            app: './js/app.js',
             style: './scss/index.scss'
         },
         output: {
