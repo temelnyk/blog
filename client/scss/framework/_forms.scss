@@ -1,0 +1,85 @@
+@import "config";
+@import "lists";
+
+
+input, textarea, select {
+  display: inline-block;
+  width: 100%;
+  padding: $interval-x-small;
+  background-color: $color-bg;
+  border: 0 none;
+  outline: 1px solid darken($color-bg, $color-fade-amount);
+
+  font-weight: $font-weight;
+  font-family: $font-family;
+  font-size: $font-size;
+
+  transition: background-color $transition-props, outline-color $transition-props;
+
+  &:hover {
+    outline-color: darken($color-bg, 2 * $color-fade-amount);
+  }
+
+  &:focus {
+    outline-color: darken($color-bg, 2 * $color-fade-amount);
+    outline-offset: 0;
+  }
+}
+
+
+textarea {
+  resize: vertical;
+  min-height: 4rem;
+}
+
+
+label {
+  display: inline-block;
+  font-size: $font-size-small;
+  margin-top: .25rem;
+}
+
+
+.controls {
+  @extend .h-list;
+  //margin-top: 1em;
+  text-align: center;
+
+  &.small {
+    font-size: $font-size-small;
+  }
+}
+
+
+.has-hover-controls {
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    .hover-controls {
+      bottom: 0;
+    }
+  }
+
+
+  .hover-controls {
+    @extend .controls;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: -2 * $interval-big;
+    padding: $interval-small;
+    background: linear-gradient(to bottom, transparent 20%, transparentize($color-bg, .05) 100%);
+    transition: bottom $transition-props;
+  }
+}
+
+
+
+form, .form {
+  @extend .v-list;
+
+  & > * {
+    margin-bottom: $interval-small;
+  }
+}

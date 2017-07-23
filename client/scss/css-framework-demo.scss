@@ -1,0 +1,27 @@
+@import "framework/config";
+
+.with-border {
+  border: 1px dashed darken($color-grey, $color-fade-amount);
+  padding: .5em;
+  //background-color: $color-grey;
+}
+
+
+.demo {
+  padding: $interval-big;
+
+
+  .row.column-demo > [class^=column] {
+    @extend .with-border;
+    margin-bottom: $interval-small;
+  }
+
+
+  .h-list-demo > *, .v-list-demo > * {
+    @extend .with-border;
+  }
+
+  .h-list-demo {
+    display: inline-block;
+  }
+}

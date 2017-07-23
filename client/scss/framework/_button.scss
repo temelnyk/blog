@@ -10,13 +10,13 @@
   text-align: center;
   vertical-align: middle;
 
-  border: 3px solid darken($color-bg, 2 * $color-fade-amount);
+  outline: 1px solid darken($color-bg, $color-fade-amount);
   cursor: pointer;
-  transition: background-color $transition-props, color $transition-props, border-color $transition-props;
+  transition: background-color $transition-props, outline-color $transition-props;
 
   &:hover {
     background-color: darken($color-bg, $color-fade-amount);
-    border-color: darken($color-bg, $color-fade-amount);
+    outline-color: darken($color-bg, $color-fade-amount);
   }
 
   &.narrow {
@@ -28,12 +28,12 @@
   @each $name, $color in (red, $color-red), (green, $color-green), (blue, $color-blue), (grey, $color-grey) {
     &.#{$name} {
       background: $color;
-      border-color: darken($color, 2 * $color-fade-amount);
+      outline-color: darken($color, $color-fade-amount);
 
       &:hover {
-        color: $color-bg;
+        //color: $color-bg;
         background-color: darken($color, $color-fade-amount);
-        border-color: darken($color, $color-fade-amount);;
+        outline-color: darken($color, $color-fade-amount);
       }
     }
   }

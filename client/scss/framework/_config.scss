@@ -3,6 +3,7 @@ $font-family: "Roboto Condensed", Helvetica, sans-serif;
 $font-size: 18px;
 $font-weight: 300;
 
+$font-size-small: .75rem;
 
 $interval-big: 2rem;
 $interval-small: .5rem;
@@ -11,8 +12,8 @@ $interval-x-small: .25rem;
 
 // {hue - 20} from "pure" color
 $color-red: hsl(340, 70%, 50%);
-$color-green: hsl(100, 70%, 50%);
-$color-blue: hsl(240, 70%, 50%);
+$color-green: hsl(100, 70%, 40%);
+$color-blue: hsl(240, 70%, 60%);
 $color-grey: hsl(0, 0%, 65%);
 
 $color-bg: #fff;

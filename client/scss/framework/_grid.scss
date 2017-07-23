@@ -10,20 +10,26 @@
 }
 
 
-.row, .column {
-  display: block;
-}
-
-
 .row {
+  display: block;
   &:after {
     @extend .clear-fix;
   }
 }
 
+
+.column-1, .column-2, .column-3, .column-4, .column-5, .column-6, .column-7, .column-8, .column-9, .column-10, .column-11, .column-12 {
+  display: block;
+  float: left;
+
+  &.gap {
+    height: 1px; // TODO find better solution because of shifting following content in responsive design
+  }
+}
+
+
 @for $i from 1 through 12 {
   .column-#{$i} {
-    float: left;
     width: 100% * ( $i / 12 );
   }
 }

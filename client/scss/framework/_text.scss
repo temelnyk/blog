@@ -14,10 +14,14 @@ html, body {
 }
 
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6 {
   font-weight: inherit;
   margin-top: $interval-big;
   margin-bottom: $interval-small;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 
@@ -38,4 +42,14 @@ h5 {
 }
 h6 {
   font-size: 1.20rem;
+}
+
+
+p {
+  margin-top: 0;
+  margin-bottom: $interval-small;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
