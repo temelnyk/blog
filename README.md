@@ -6,19 +6,28 @@
 
 1. **Apache**, **PHP7**, **MySQL5.7.x** are required:
   - **Linux:** `sudo apt-get install apache2 php7.0 php7.0-mysql php7.0-curl php7.0-json php7.0-cgi php7.0-mbstring libapache2-mod-php7.0`
-  - **Windows:** Install [XAMPP](https://www.apachefriends.org/index.html). Make sure that PHP and MariaDB (behaves like MySQL) are of proper versions during the installation.
+  - **Windows:** Install [XAMPP](https://www.apachefriends.org/index.html). Make sure you install proper versions of PHP and MariaDB (behaves like MySQL).
   - Make sure there are following modules installed:
     - `mbstring` (required for Facebook);
     - `mod_rewrite` (required for `.htaccess`).
 1. Clone the project and go to project directory.
-1. Make sure the Apache and MySQL/MariaDB servers are up and running.
-1. Add the record `127.0.0.1       blog` to your **hosts file** ('/etc/hosts' in Linux; `C:\\Windows\\System32\\drivers\\etc\\hosts` in Windows).
-1. Adjust directories in `apache2.conf` (make sure paths refer to real project directory):
-  - **Linux:** `cat apache2.conf | sed "s:/home.*blog:$(pwd):g" > apache2.conf`
-  - **Windows:** do it manually.
-1. Create the symlink from `apache2.conf` to the config file responsible for the project in Apache config directory (mind the correct path to the project dir):
-  - **Linux:** `cd /etc/apache2/sites-available && sudo ln -s /home/rom/Prj/blog/apache2.conf blog.conf && cd -`
-  - **Windows:** mind paths and use `junction`/`mklink` instead of `ln`.
+1. Make sure the **Apache** and **MySQL/MariaDB** servers are up and running.
+1. Add the record `127.0.0.1       blog` to your **hosts file** (`/etc/hosts` in Linux; `C:\Windows\System32\drivers\etc\hosts` in Windows).
+1. Copy `apache2.conf` to Apache configuration folder:
+  - **Linux:** `sudo cp apache2.conf /etc/apache2/sites-available/blog.conf`
+  - **Windows:** `copy apache2.conf C:\xampp\apache\conf\extra\blog.conf`  
+   or `cp apache2.conf /c/xampp/apache/extra/blog.conf` if you're using GitBash.
+1. Adjust directories in `blog.conf` to make sure that
+  - `DocumentRoot` and `Directory` refer to `<path-to-project>/server/` folder,
+  - all the logs (`ErrorLog` and `CustomLog` entries) refer to `<path-to-project>/logs/...` folder.
+  - **Linux** users should use `sudo`-friendly editor.
+  - **Windows** users, please mind paths (they should look Linux-style like `/Users/me/Projects/blog...`).
+1. Make sure the `blog.conf` is used by Apache:
+  - **Linux:** `sudo a2ensite blog.conf`
+  - **Windows:** open `httpd.conf` via XAMPP control panel (Apache > Config); find the line  
+   `Include conf/extra/httpd-vhosts.conf`  
+   and add following line just below it:  
+   `Include conf/extra/blog.conf`
 1. Restart the Apache2:
   - **Linux** `sudo systemctl restart apache2.service`
   - **XAMPP/Windows:** via XAMPP control panel.
