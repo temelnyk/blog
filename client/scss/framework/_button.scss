@@ -4,19 +4,19 @@
 .button {
   display: inline-block;
   min-width: 2 * $interval-big + 1rem;
-  padding: $interval-x-small $interval-big;
+  padding: $interval-small $interval-big;
   line-height: 1;
 
   text-align: center;
   vertical-align: middle;
 
-  outline: 1px solid darken($color-bg, $color-fade-amount);
+  outline: 2px solid $color-light-grey;
+  outline-offset: -2px;
   cursor: pointer;
   transition: background-color $transition-props, outline-color $transition-props;
 
   &:hover {
-    background-color: darken($color-bg, $color-fade-amount);
-    outline-color: darken($color-bg, $color-fade-amount);
+    background-color: $color-light-grey;
   }
 
   &.narrow {

@@ -4,8 +4,7 @@
     <title>CSS Framework visuals</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
-    <script type="application/javascript" src="js/app.js"></script>
-    <script type="application/javascript" src="js/admin-app.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body class="demo">
 <h1>Header <b>&lt;h1&gt;</b></h1>
@@ -116,12 +115,12 @@
             <label for="input-num">Textarea</label>
         </div>
         <div class="column-9">
-            <textarea>Lorem ipsun dolor</textarea>
+            <textarea>Lorem ipsum dolor</textarea>
         </div>
     </div>
     <div class="controls">
-        <span class="button grey">Back</span>
-        <span class="button green">Ok</span>
+        <span class="button grey"><i class="fa fa-long-arrow-left" aria-hidden="true"></i></span>
+        <span class="button green"><i class="fa fa-check" aria-hidden="true"></i></span>
     </div>
 </form>
 </body>

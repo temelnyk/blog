@@ -1,0 +1,20 @@
+@import "constants";
+
+
+body > .main-content {
+  margin: 2rem 4rem;
+  max-width: $content-max-width;
+  min-width: $content-min-width;
+}
+
+
+body > header {
+  margin-bottom: 2rem;
+}
+
+
+body > footer {
+  margin-bottom: 2rem;
+}
+
+.admin-app {}

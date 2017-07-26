@@ -5,27 +5,29 @@ $font-weight: 300;
 
 $font-size-small: .75rem;
 
+
 $interval-big: 2rem;
 $interval-small: .5rem;
 $interval-x-small: .25rem;
 
 
-// {hue - 20} from "pure" color
-$color-red: hsl(340, 70%, 50%);
-$color-green: hsl(100, 70%, 40%);
-$color-blue: hsl(240, 70%, 60%);
-$color-grey: hsl(0, 0%, 65%);
+$color-fade-amount: 10%;
+
+// {hue - 10} from "pure" color
+$color-red: hsl(350, 50%, 50%);
+$color-green: hsl(110, 50%, 50%);
+$color-blue: hsl(230, 50%, 50%);
+$color-grey: hsl(0, 0%, 60%);
+$color-light-grey: lighten($color-grey, 3 * $color-fade-amount);
 
 $color-bg: #fff;
-$color-text: #222;
+$color-text: hsl(0, 0%, 10%);
 $color-link: $color-blue;
-
-$color-fade-amount: 10%;
 
 
 $screen-s-width: 480px;
 $screen-m-width: 800px;
-$screen-content-max-width: 1400px;
+$screen-l-width: 1400px;
 
 
 $transition-props: .15s ease-in;

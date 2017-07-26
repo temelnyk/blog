@@ -5,10 +5,11 @@
 input, textarea, select {
   display: inline-block;
   width: 100%;
-  padding: $interval-x-small;
+  padding: $interval-small;
   background-color: $color-bg;
   border: 0 none;
-  outline: 1px solid darken($color-bg, $color-fade-amount);
+  outline: 2px solid $color-light-grey;
+  outline-offset: -2px;
 
   font-weight: $font-weight;
   font-family: $font-family;
@@ -17,12 +18,12 @@ input, textarea, select {
   transition: background-color $transition-props, outline-color $transition-props;
 
   &:hover {
-    outline-color: darken($color-bg, 2 * $color-fade-amount);
+    outline-color: $color-grey;
   }
 
   &:focus {
-    outline-color: darken($color-bg, 2 * $color-fade-amount);
-    outline-offset: 0;
+    outline-color: $color-grey;
+    //outline-offset: 0;
   }
 }
 
