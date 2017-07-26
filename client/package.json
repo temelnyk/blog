@@ -4,8 +4,10 @@
   "description": "Simple blog (client side; mostly SPA on Admin)",
   "main": "index.js",
   "scripts": {
-    "dev": "node pre-prod.js --restore && webpack --watch",
+    "dev": "webpack --watch",
+    "qa-build": "webpack --env.PROD=true",
     "prod": "webpack --env.PROD=true && node pre-prod.js --clean",
+    "restore-dev": "node pre-prod.js --restore",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -13,10 +15,24 @@
     "php",
     "webpack"
   ],
-  "author": "",
+  "contributors": [
+    "Roman Melnyk <email.rom.melnyk@gmail.com>",
+    "Tetiana Melnyk <tamell2011@gmail.com>"
+  ],
+  "repository": {
+    "url": "https://github.com/rom-melnyk/blog",
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/rom-melnyk/blog/issues",
+    "email": "email.rom.melnyk@gmail.com"
+  },
   "license": "ISC",
   "private": true,
   "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
     "babili-webpack-plugin": "^0.1.2",
     "clean-webpack-plugin": "^0.1.16",
     "css-loader": "^0.28.4",
@@ -25,5 +41,9 @@
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "webpack": "^3.3.0"
+  },
+  "dependencies": {
+    "preact": "^8.2.1",
+    "preact-router": "^2.5.5"
   }
 }

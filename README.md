@@ -44,7 +44,8 @@
 MySQL 5.7.x is required.
 
 First, create the user and the database:
-- open the MySQL comman line: `$ mysql -uroot -p<...>` where `<...>` is your root password;
+- open the MySQL command line: `$ mysql -uroot -p<...>` where `<...>` is your root password;
+  - **XAMPP/Windows** users, mind that `mysql` command is not added to `PATH` automatically by XAMPP installation so you have to make sure you're in proper directory before running `mysql` command.
 - perform following commands one by one (replace `<...>` with actual password for `blog` user):
 ```sql
 use mysql;
@@ -113,19 +114,22 @@ The content of `client` contains JS and SCSS development files. They are compile
 - `npm run test`
 - `npm run prod` before uploading files to production.  
    **Mind that this script removes `.gitignore` files** in `server/css` and `server/js` folders.  
-   They are restored automatically before `npm run dev`.
+   If you do it by accident, do `npm run restore-dev`.
 
 Client app contains Admin app (SPA) and some business logic for General area.
 
 
 
-## Branching strategy and the workflow
+## Development workflow
+
+### Branching strategy
 
 Branch `master` contains the latest working code (it's not deployable because does not contain compiled client code).
 
 Branches `sprint-...` contain sprint releases. Every new sprint branch starts at the beginning of the sprint from `master` (so it's eventually based on the previous sprint ode). Code is being pushed into the sprint branch during the sprint. At the end of the sprint it gets merged into `master`.
 
-Branches `release-...` are branched off from `master` at release time.
+Branches `release-...` are branched off from `master` at release time. They look like corresponding sprint branches.  
+   Releade branches should be checked out on production. After that the `npm install && npm run prod` should be run in `client/` folder.
 
 ```
           feature-a     feature-b                feature-c          
@@ -138,7 +142,11 @@ Branches `release-...` are branched off from `master` at release time.
 __/_______________ master ______________\/_______________________\__
 ```
 
-Before testing (or deploying) any branch, run `npm install && npm run prod` in `client/` folder!
+### QA process
+
+1. Checkout the `sprint-...` branch.
+1. Go to `client/` folder an run `npm install && npm run qa-build` there.
+1. If any post-deploy changes were merged into sprint branch, do `git pull` and redo previous step before re-testing.
 
 
 

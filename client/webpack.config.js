@@ -31,6 +31,7 @@ module.exports = (env) => {
         })
     };
 
+    const jsModuleRule = { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' };
 
 
     const cleanWebpackPlugin = new CleanWebpackPlugin(['css', 'js'], {
@@ -53,8 +54,8 @@ module.exports = (env) => {
 
     const CONFIG_BASE = {
         entry: {
-            'admin-app': './js/admin-app.js',
-            app: './js/app.js',
+            'admin-app': './js/admin-app/admin-app.js',
+            app: './js/app/app.js',
             style: './scss/index.scss'
         },
         output: {
@@ -63,7 +64,8 @@ module.exports = (env) => {
         },
         module: {
             rules: [
-                scssModuleRule
+                scssModuleRule,
+                jsModuleRule
             ]
         },
         watchOptions: {

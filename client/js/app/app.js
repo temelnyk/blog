@@ -1,6 +1,6 @@
 'use strict';
 
-const test = require('./test');
+const test = require('../test');
 
 const App = {
     start() {
