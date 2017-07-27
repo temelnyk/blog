@@ -123,5 +123,14 @@
         <span class="button green"><i class="fa fa-check" aria-hidden="true"></i></span>
     </div>
 </form>
+
+
+
+<h1>Links</h1>
+<p>Link <b>&lt;a&gt;</b>: <a href="#">link</a> followed by some text</p>
+<p>Pseudo-link <b>.pseudo-link</b>: <span class="pseudo-link" title="Hover">pseudo-link</span> plus some text</p>
+
+
+
 </body>
 </html>

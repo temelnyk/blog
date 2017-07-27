@@ -1,0 +1,23 @@
+@import "config";
+
+
+a {
+  color: $color-link;
+  text-decoration: none;
+  border-bottom: 1px solid $color-link;
+  transition: color $transition-props, border-bottom-color $transition-props;
+
+
+  &:hover, &:active, &:visited {
+    color: darken($color-link, 3 * $color-fade-amount);
+    border-bottom-color: darken($color-link, 3 * $color-fade-amount);
+  }
+}
+
+
+.pseudo-link {
+  @extend a;
+
+  cursor: pointer;
+  border-bottom-style: dotted;
+}
