@@ -1,6 +1,13 @@
 import { h, render, Component } from 'preact';
 import { Router } from 'preact-router';
 
+import AdminMenu from './views/admin-menu';
+import PostsManager from './views/posts-manager';
+import ImagesManager from './views/images-manager';
+import TagsManager from './views/tags-manager';
+
+import { LINKS } from './urls';
+
 
 class AdminApp extends Component {
     constructor() {
@@ -18,19 +25,15 @@ class AdminApp extends Component {
     }
 
     render(props, state) {
-        return <div>React app works!</div>;
-        // return (
-        //     {/*<Router>*/}
-        //         {/*<DishesManager path={ LINKS.DishesList } dishesStructure={ state['dishes-structure'] } />
-        //         <DishForm path={ LINKS.EditDish } />
-        //         <DishForm path={ `${LINKS.EditDish}/:id` } />
-        //         <GroupForm path={ `${LINKS.EditGroup}` } />
-        //         <GroupForm path={ `${LINKS.EditGroup}/:id` } />
-        //
-        //         <ImagesManager path={ LINKS.ImagePicker } images={ state.images } mode={ ImageManagerModes.Picker } />
-        //         <ImagesManager path={ LINKS.ImagesManager } images={ state.images } mode={ ImageManagerModes.Manager } />*/}
-        //     {/*</Router>*/}
-        // );
+        return (
+            <Router>
+                <PostsManager path={ LINKS.PostsManager } />
+                <ImagesManager path={ LINKS.ImagesManager } />
+                <TagsManager path={ LINKS.TagsManager } />
+                {/*<PostForm path={ LINKS.EditPost } />
+                <PostForm path={ `${LINKS.EditPost}/:id` } />*/}
+            </Router>
+        );
     }
 }
 
@@ -42,7 +45,7 @@ function startAdminApp() {
 
     const menuDiv = document.querySelector('header > nav');
     const appDiv = document.querySelector('.admin-app');
-    // render(<AdminMenu />, menuDiv);
+    render(<AdminMenu />, menuDiv);
     render(<AdminApp />, appDiv);
 
     // prepare state
