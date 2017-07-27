@@ -1,5 +1,7 @@
 @import "framework/index"; // framework
 @import "css-framework-demo"; // TODO remove after separating the CSS framework
 
-@import "constants";
-@import "common";
+@import "shared/shared";
+
+@import "admin-app/admin-app";
+@import "app/app";

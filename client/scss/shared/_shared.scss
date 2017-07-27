@@ -1,0 +1,44 @@
+@import "config";
+
+
+body {
+  padding: 0 $interval-big;
+  min-width: $screen-min-width;
+
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: 1.5;
+
+
+  @media screen and (max-width: $screen-min-width * 1.5) {
+    font-size: 16px;
+  }
+
+}
+
+
+.main-content {
+  background-color: #eee;
+  margin: 0 auto;
+  max-width: $content-max-width;
+
+
+  & > header {
+    margin: $interval-big 0;
+
+    .header-logo {
+      font-size: $font-size-small;
+    }
+  }
+
+
+  & > footer {
+    margin: $interval-big 0;
+    font-size: $font-size-small;
+
+    .copy {
+      white-space: nowrap;
+    }
+  }
+}

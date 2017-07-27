@@ -1,0 +1,35 @@
+// Copy-pasted from the Framework because project files should be independent from the Framework
+
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300&subset=cyrillic");
+$font-family: "Roboto Condensed", Helvetica, sans-serif;
+$font-size: 18px;
+$font-weight: 300;
+
+$font-size-small: .75rem;
+
+
+$interval-big: 2rem;
+$interval-small: .5rem;
+$interval-x-small: .25rem;
+
+
+$color-fade-amount: 10%;
+
+$color-red: hsl(10, 50%, 50%);
+$color-green: hsl(130, 50%, 50%);
+$color-blue: hsl(250, 50%, 50%);
+$color-grey: hsl(0, 0%, 60%);
+$color-light-grey: lighten($color-grey, 3 * $color-fade-amount);
+
+$color-bg: #fff;
+$color-text: hsl(0, 0%, 10%);
+$color-link: $color-blue;
+
+
+$screen-min-width: 320px;
+
+$content-min-width: 480px;
+$content-max-width: 1400px;
+
+
+$transition-props: .15s ease-out;
