@@ -1,20 +1,26 @@
 @import "constants";
 
 
-body > .main-content {
-  margin: 2rem 4rem;
+body {
+  padding: 0 2rem;
+  min-width: $screen-min-width;
+}
+
+
+.main-content {
+  background-color: #eee;
+  margin: 0 auto;
   max-width: $content-max-width;
-  min-width: $content-min-width;
+
+
+  & > header, & > footer {
+    margin: 2rem 0;
+  }
 }
 
 
-body > header {
-  margin-bottom: 2rem;
+@media screen and (max-width: $screen-min-width * 1.5) {
+  body {
+    font-size: 16px;
+  }
 }
-
-
-body > footer {
-  margin-bottom: 2rem;
-}
-
-.admin-app {}
