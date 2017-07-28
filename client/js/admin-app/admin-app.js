@@ -8,20 +8,21 @@ import TagsManager from './views/tags-manager';
 
 import { LINKS } from './urls';
 
+import store from './store';
 
 class AdminApp extends Component {
     constructor() {
         super();
-        Object.assign(this.state, {} /*store.state*/);
+        Object.assign(this.state, store.state);
         this._setState = this.setState.bind(this);
     }
 
     componentDidMount() {
-        // store.addChangeListener(this._setState);
+        store.addChangeListener(this._setState);
     }
 
     componentWillUnmount() {
-        // store.removeChangeListener(this._setState);
+        store.removeChangeListener(this._setState);
     }
 
     render(props, state) {
@@ -39,7 +40,7 @@ class AdminApp extends Component {
 
 
 function startAdminApp() {
-    if (!/^\/admin$/.test(location.pathname)) {
+    if ('/admin' !== location.pathname) {
         return;
     }
 
@@ -49,8 +50,9 @@ function startAdminApp() {
     render(<AdminApp />, appDiv);
 
     // prepare state
-    // getDishesStructure();
+    // getPosts();
     // getImages();
+    // getTags();
 }
 
 
