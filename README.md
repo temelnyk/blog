@@ -126,10 +126,15 @@ Client app contains Admin app (SPA) and some business logic for General area.
 
 Branch `master` contains the latest working code (it's not deployable because does not contain compiled client code).
 
-Branches `sprint-...` contain sprint releases. Every new sprint branch starts at the beginning of the sprint from `master` (so it's eventually based on the previous sprint ode). Code is being pushed into the sprint branch during the sprint. At the end of the sprint it gets merged into `master`.
+Branches `sprint-...` contain sprint releases. Lifecycle:
+- **Beginning of the sprint:** new sprint branch started from `master` (so it's eventually based on the previous sprint code).
+- **During the sprint** code is being pushed into the sprint branch.
+- **At the end of the sprint**
+  - `CHANGELOG.md` gets updated;
+  - the sprint branch gets merged into `master`.
 
 Branches `release-...` are branched off from `master` at release time. They look like corresponding sprint branches.  
-   Releade branches should be checked out on production. After that the `npm install && npm run prod` should be run in `client/` folder.
+   Release branches should be checked out on production. After that the `npm install && npm run prod` should be run in `client/` folder.
 
 ```
           feature-a     feature-b                feature-c          
