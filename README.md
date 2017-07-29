@@ -150,6 +150,7 @@ __/_______________ master ______________\/_______________________\__
 ### QA process
 
 1. Checkout the `sprint-...` branch.
+1. Check the `CHANGELOG.md` (chapter dedicated to actual sprint) and follow instructions there if any.
 1. Go to `client/` folder an run `npm install && npm run qa-build` there.
 1. If any post-deploy changes were merged into sprint branch, do `git pull` and redo previous step before re-testing.
 
