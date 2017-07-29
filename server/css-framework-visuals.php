@@ -127,9 +127,9 @@
 
 
 <h1>Links</h1>
-<p>Link <b>&lt;a&gt;</b>: <a href="#">link</a> followed by some text</p>
-<p>Pseudo-link <b>.pseudo-link</b>: <span class="pseudo-link" title="Hover">pseudo-link</span> plus some text</p>
-
+<p>Link <b>&lt;a&gt;</b>: <a href="#">link</a> followed by some text.</p>
+<p>Pseudo-link <b>.pseudo-link</b>: <span class="pseudo-link" title="I am clickable">pseudo-link</span> plus some text.</p>
+<p>Hover tip <b>.hover-tip</b>: <span class="hover-tip" title="Some explanation">some text</span>.</p>
 
 
 </body>

@@ -21,3 +21,13 @@ a {
   cursor: pointer;
   border-bottom-style: dotted;
 }
+
+
+.hover-tip {
+  border-bottom: 1px dotted transparent;
+  border-bottom-color: inherit; // if optimized, 'inherit' value does not work!
+
+  &:hover {
+    border-bottom-style: solid;
+  }
+}

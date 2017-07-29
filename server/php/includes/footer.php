@@ -8,8 +8,8 @@
     <div class="column-9 footer-about-us">
         <p>
             &copy;
-            <span class="copy pseudo-link" title="Dev">Roman Melnyk,</span>
-            <span class="copy pseudo-link" title="QA, Design">Tetiana Melnyk,</span>
+            <span class="copy hover-tip" title="Dev">Roman Melnyk,</span>
+            <span class="copy hover-tip" title="QA, Design">Tetiana Melnyk,</span>
             2017
         </p>
         <p>Got a bug? <a class="link" href="mailto:email.rom.melnyk@gmail.com">Tell us!</a></p>
