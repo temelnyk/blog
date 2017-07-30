@@ -17,7 +17,7 @@
 - Copy `apache2.conf` to Apache configuration folder:
   - **Linux:** `sudo cp apache2.conf /etc/apache2/sites-available/blog.conf`
   - **Windows:** `copy apache2.conf C:\xampp\apache\conf\extra\blog.conf`  
-   or `cp apache2.conf /c/xampp/apache/extra/blog.conf` if you're using GitBash.
+   or `cp apache2.conf /c/xampp/apache/conf/extra/blog.conf` if you're using GitBash.
 - Adjust directories in `blog.conf` to make sure that
   - `DocumentRoot` and `Directory` refer to `<path-to-project>/server/` folder,
   - all the logs (`ErrorLog` and `CustomLog` entries) refer to `<path-to-project>/logs/...` folder.
